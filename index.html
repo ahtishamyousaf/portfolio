@@ -9,6 +9,9 @@
 <meta property="og:description" content="Data Analyst & Developer. Power BI, Python, SQL, Excel. Open to work.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0a0e0f">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0e0f'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='18' fill='%2300d084'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -272,8 +275,6 @@
     .hero-photo-wrap { order: -1; }
     .hero-photo { width: 140px; height: 140px; }
     .contact-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 700px) {
     .hero { padding: 5rem 1.25rem 3rem; }
     section { padding: 3.5rem 1.25rem; }
     .about-grid { grid-template-columns: 1fr; }
@@ -288,35 +289,36 @@
 
 <nav>
   <div class="nav-logo"><span>~/</span>ahtisham<span>.dev</span></div>
-  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+  <button type="button" class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
     <span></span><span></span><span></span>
   </button>
   <ul id="nav-menu">
-    <li><a onclick="navScrollTo('about')">about</a></li>
-    <li><a onclick="navScrollTo('experience')">experience</a></li>
-    <li><a onclick="navScrollTo('skills')">skills</a></li>
-    <li><a onclick="navScrollTo('projects')">projects</a></li>
-    <li><a onclick="navScrollTo('languages')">languages</a></li>
-    <li><a onclick="navScrollTo('education')">education</a></li>
-    <li><a onclick="navScrollTo('contact')">contact</a></li>
+    <li><a href="#about" onclick="navScrollTo(event, 'about')">about</a></li>
+    <li><a href="#experience" onclick="navScrollTo(event, 'experience')">experience</a></li>
+    <li><a href="#skills" onclick="navScrollTo(event, 'skills')">skills</a></li>
+    <li><a href="#projects" onclick="navScrollTo(event, 'projects')">projects</a></li>
+    <li><a href="#languages" onclick="navScrollTo(event, 'languages')">languages</a></li>
+    <li><a href="#education" onclick="navScrollTo(event, 'education')">education</a></li>
+    <li><a href="#contact" onclick="navScrollTo(event, 'contact')">contact</a></li>
   </ul>
 </nav>
 
+<main id="main-content">
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
   <div class="hero-content">
-    <div class="hero-tag">open to work · data analyst &amp; junior developer roles</div>
+    <div class="hero-tag">open to work &nbsp;·&nbsp; islamabad, pk &nbsp;·&nbsp; remote friendly</div>
     <h1>Ahtisham <span class="accent">Yousaf</span></h1>
-    <div class="hero-sub">// data_analyst · frontend_dev · agentic_ai_learner</div>
+    <div class="hero-sub">// data analyst &nbsp;·&nbsp; frontend developer &nbsp;·&nbsp; agentic ai</div>
     <p class="hero-desc">
       Data Analytics student with a background in frontend development and a growing interest in AI-powered systems.
       Hands-on with Excel, Power BI, Python, and SQL — building dashboards and insights that support real business decisions.
-      Based in Islamabad, Pakistan. Open to remote.
+      Currently completing a Data Analytics Bootcamp at atomcamp and an Agentic AI program at PIAIC.
     </p>
     <div class="hero-cta">
-      <a onclick="navScrollTo('projects')" class="btn btn-primary" style="cursor:pointer">→ view projects</a>
-      <a onclick="navScrollTo('contact')" class="btn btn-outline" style="cursor:pointer">get in touch</a>
+      <a href="#projects" class="btn btn-primary" onclick="navScrollTo(event, 'projects')">→ view projects</a>
+      <a href="#contact" class="btn btn-outline" onclick="navScrollTo(event, 'contact')">get in touch</a>
     </div>
 
     <div class="terminal">
@@ -330,7 +332,7 @@
       <div class="terminal-line" style="margin-top:0.5rem"><span class="t-prompt">❯ </span><span class="t-cmd">cat stack.txt</span></div>
       <div class="terminal-line"><span class="t-cyan">power_bi</span> <span class="t-out">·</span> <span class="t-cyan">excel</span> <span class="t-out">·</span> <span class="t-cyan">python</span> <span class="t-out">·</span> <span class="t-cyan">sql</span> <span class="t-out">·</span> <span class="t-cyan">agentic_ai</span></div>
       <div class="terminal-line" style="margin-top:0.5rem"><span class="t-prompt">❯ </span><span class="t-cmd">git log --oneline -1</span></div>
-      <div class="terminal-line"><span class="t-amber">f8a3c12</span> <span class="t-out">feat: amazon sales dashboard — 20k+ records analyzed</span></div>
+      <div class="terminal-line"><span class="t-amber">3d9f1a7</span> <span class="t-out">feat: amazon sales dashboard — 20k+ records analyzed</span></div>
       <div class="terminal-line" style="margin-top:0.5rem"><span class="t-prompt">❯ </span><span class="t-cmd">status --jobs</span></div>
       <div class="terminal-line"><span class="t-green" style="color:var(--green)">● open to work</span> <span class="t-out">· islamabad, pk · remote ok</span></div>
       <div class="terminal-line" style="margin-top:0.5rem"><span class="t-prompt">❯ </span><span class="cursor"></span></div>
@@ -372,7 +374,7 @@
         </div>
         <div class="stat-card">
           <span class="stat-num">11mo</span>
-          <span class="stat-label">industry experience</span>
+          <span class="stat-label">frontend dev experience</span>
         </div>
         <div class="stat-card">
           <span class="stat-num">3</span>
@@ -508,12 +510,13 @@
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title">tools</div>
+      <div class="skill-group-title">tools &amp; workflow</div>
       <div class="skill-tags">
         <span class="tag">GitHub</span>
         <span class="tag">VS Code</span>
-        <span class="tag">CMS</span>
-        <span class="tag">WSL2</span>
+        <span class="tag">Jupyter Notebook</span>
+        <span class="tag">Google Sheets</span>
+        <span class="tag">Notion</span>
       </div>
     </div>
   </div>
@@ -579,8 +582,8 @@
     <div class="project-card">
       <div class="project-header">
         <div>
-          <div class="project-name">Global Olympic Talent Program</div>
-          <div class="project-org">atomcamp · End-to-End BI Solution</div>
+          <div class="project-name">Olympic Athletes BI Dashboard</div>
+          <div class="project-org">atomcamp · Power BI · End-to-End BI Solution</div>
         </div>
         <span class="project-badge badge-bi">POWER BI</span>
       </div>
@@ -777,11 +780,11 @@
       </div>
       <div class="contact-item">
         <span class="contact-icon">⌥</span>
-        <a href="https://linkedin.com/in/ahtishamyousaf25" target="_blank">linkedin.com/in/ahtishamyousaf25</a>
+        <a href="https://linkedin.com/in/ahtishamyousaf25" target="_blank" rel="noopener noreferrer">linkedin.com/in/ahtishamyousaf25</a>
       </div>
       <div class="contact-item">
         <span class="contact-icon">⌥</span>
-        <a href="https://github.com/ahtishamyousaf" target="_blank">github.com/ahtishamyousaf</a>
+        <a href="https://github.com/ahtishamyousaf" target="_blank" rel="noopener noreferrer">github.com/ahtishamyousaf</a>
       </div>
       <div class="contact-item">
         <span class="contact-icon">◎</span>
@@ -789,60 +792,80 @@
       </div>
       <div style="margin-top: 1.5rem;">
         <div class="social-links">
-          <a href="https://linkedin.com/in/ahtishamyousaf25" class="social-link" target="_blank">⌥ linkedin</a>
-          <a href="https://github.com/ahtishamyousaf" class="social-link" target="_blank">⌥ github</a>
+          <a href="https://linkedin.com/in/ahtishamyousaf25" class="social-link" target="_blank" rel="noopener noreferrer">⌥ linkedin</a>
+          <a href="https://github.com/ahtishamyousaf" class="social-link" target="_blank" rel="noopener noreferrer">⌥ github</a>
           <a href="mailto:ahtishamyousaf25@gmail.com" class="social-link">⌥ email</a>
         </div>
       </div>
     </div>
     <div>
       <div class="form-group">
-        <label>your name</label>
-        <input type="text" id="contact-name" placeholder="Jane Smith">
+        <label for="contact-name">your name</label>
+        <input type="text" id="contact-name" placeholder="Ali Hassan" autocomplete="name">
       </div>
       <div class="form-group">
-        <label>your email</label>
-        <input type="email" id="contact-email" placeholder="jane@company.com">
+        <label for="contact-email">your email</label>
+        <input type="email" id="contact-email" placeholder="ali@company.com" autocomplete="email">
       </div>
       <div class="form-group">
-        <label>message</label>
-        <textarea id="contact-msg" placeholder="Hi Ahtisham, I came across your portfolio and..."></textarea>
+        <label for="contact-msg">message</label>
+        <textarea id="contact-msg" placeholder="Hi Ahtisham, I came across your portfolio and would love to connect..."></textarea>
       </div>
-      <button class="btn-submit" onclick="handleContact()">→ send message</button>
+      <button type="button" class="btn-submit" onclick="handleContact()">→ send message</button>
       <div class="form-success" id="form-success">✓ Message noted! Opening your email client now...</div>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer style="border-top: 1px solid var(--border); padding: 2rem 2.5rem; text-align: center;">
   <p style="font-size: 11px; color: var(--text-dim); letter-spacing: 0.05em;">
-    © 2025 ahtisham yousaf &nbsp;·&nbsp; islamabad, pk &nbsp;·&nbsp; open to work
+    © 2026 ahtisham yousaf &nbsp;·&nbsp; islamabad, pk &nbsp;·&nbsp; open to work
   </p>
 </footer>
 
 
 <script>
-function toggleMenu() {
+function setMenuOpen(open) {
   var menu = document.getElementById('nav-menu');
   var btn = document.getElementById('hamburger');
-  menu.classList.toggle('open');
-  btn.classList.toggle('open');
+  if (menu) menu.classList.toggle('open', open);
+  if (btn) {
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
 }
-function navScrollTo(id) {
+function toggleMenu() {
+  var menu = document.getElementById('nav-menu');
+  var open = menu && !menu.classList.contains('open');
+  setMenuOpen(open);
+}
+function navScrollTo(e, id) {
+  if (e && e.preventDefault) e.preventDefault();
   var el = document.getElementById(id);
   if (el) {
     var top = el.getBoundingClientRect().top + window.pageYOffset - 68;
     window.scrollTo({ top: top, behavior: 'smooth' });
   }
-  // close mobile menu after click
-  document.getElementById('nav-menu').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
+  setMenuOpen(false);
 }
 </script>
 <script>
 function handleContact() {
-  const name = document.getElementById('contact-name').value;
-  const email = document.getElementById('contact-email').value;
-  const msg = document.getElementById('contact-msg').value;
-  if (!name || !email || !msg) { alert('Please fill in all fields.'); return; }
-  const subject = encodeURIComponent('Portfol
+  var name = document.getElementById('contact-name').value.trim();
+  var fromEmail = document.getElementById('contact-email').value.trim();
+  var msg = document.getElementById('contact-msg').value.trim();
+  if (!name || !fromEmail || !msg) {
+    alert('Please fill in all fields.');
+    return;
+  }
+  var to = 'ahtishamyousaf25@gmail.com';
+  var subject = encodeURIComponent('Portfolio contact from ' + name);
+  var body = encodeURIComponent('From: ' + fromEmail + '\n\n' + msg);
+  document.getElementById('form-success').style.display = 'block';
+  window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+}
+</script>
+</body>
+</html>
